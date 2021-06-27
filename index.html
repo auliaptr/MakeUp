@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Glow to the Up!</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+</head>
+
+<body id="page-top" onload="preview();">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#">MAKEUP PRODUCT</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Brand</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" onclick="keluar('anna%20sui')" style='color:#000000'>Anna Sui</a>
+                        <a class="dropdown-item" onclick="keluar('annabelle')" style='color:#000000'>Annabelle</a>
+                        <a class="dropdown-item" onclick="keluar('benefit')" style='color:#000000'>Benefit</a>
+                        <a class="dropdown-item" onclick="keluar('clinique')" style='color:#000000'>Clinique</a>
+                        <a class="dropdown-item" onclick="keluar('colourpop')" style='color:#000000'>Colourpop</a>
+                        <a class="dropdown-item" onclick="keluar('covergirl')" style='color:#000000'>Covergirl</a>
+                        <a class="dropdown-item" onclick="keluar('dior')" style='color:#000000'>Dior</a>
+                        <a class="dropdown-item" onclick="keluar('e.l.f.')" style='color:#000000'>E.L.F.</a>
+                        <a class="dropdown-item" onclick="keluar('fenty')" style='color:#000000'>Fenty</a>
+                        <a class="dropdown-item" onclick="keluar('l%27oreal')" style='color:#000000'>L'oreal</a>
+                        <a class="dropdown-item" onclick="keluar('maybelline')" style='color:#000000'>Maybelline</a>
+                        <a class="dropdown-item" onclick="keluar('misa')" style='color:#000000'>Misa</a>
+                        <a class="dropdown-item" onclick="keluar('nyx')" style='color:#000000'>NYX</a>
+                        <a class="dropdown-item" onclick="keluar('revlon')" style='color:#000000'>Revlon</a>
+                        <a class="dropdown-item" onclick="keluar('stila')" style='color:#000000'>Stila</a>
+                        <a class="dropdown-item" onclick="keluar('wet%20n%20wild')" style='color:#000000'>Wet n Wild</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Type</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" onclick="output('blush')" style='color:#000000'>Blush</a>
+                        <a class="dropdown-item" onclick="output('bronzer')" style='color:#000000'>Bronzer</a>
+                        <a class="dropdown-item" onclick="output('eyebrow')" style='color:#000000'>Eyebrow</a>
+                        <a class="dropdown-item" onclick="output('eyeliner')" style='color:#000000'>Eyeliner</a>
+                        <a class="dropdown-item" onclick="output('eyeshadow')" style='color:#000000'>Eyeshadow</a>
+                        <a class="dropdown-item" onclick="output('foundation')" style='color:#000000'>Foundation</a>
+                        <a class="dropdown-item" onclick="output('lipliner')" style='color:#000000'>Lip Liner</a>
+                        <a class="dropdown-item" onclick="output('lipstick')" style='color:#000000'>Lip Stick</a>
+                        <a class="dropdown-item" onclick="output('mascara')" style='color:#000000'>Mascara</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Category</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" onclick="muncul('blush powder')" style='color:#000000'>Blush - Powder</a>
+                        <a class="dropdown-item" onclick="muncul('blush cream')" style='color:#000000'>Blush - Cream</a>
+                        <a class="dropdown-item" onclick="muncul('bronzer powder')" style='color:#000000'>Bronzer - Powder</a>
+                        <a class="dropdown-item" onclick="muncul('eyebrow pencil')" style='color:#000000'>Eyebrow - Pencil</a>
+                        <a class="dropdown-item" onclick="muncul('eyeliner liquid')" style='color:#000000'>Eyeliner - Liquid</a>
+                        <a class="dropdown-item" onclick="muncul('eyeliner pencil')" style='color:#000000'>Eyeliner - Pencil</a>
+                        <a class="dropdown-item" onclick="muncul('eyeshadow palette')" style='color:#000000'>Eyeshadow - Palette</a>
+                        <a class="dropdown-item" onclick="muncul('foundation concealer')" style='color:#000000'>Foundation - Concealer</a>
+                        <a class="dropdown-item" onclick="muncul('foundation bb_cc')" style='color:#000000'>Foundation - BB/CC</a>
+                        <a class="dropdown-item" onclick="muncul('foundation cream')" style='color:#000000'>Foundation - Cream</a>
+                        <a class="dropdown-item" onclick="muncul('lipstick lip_gloss')" style='color:#000000'>Lipstick - Lip Gloss</a>
+                        <a class="dropdown-item" onclick="muncul('lipstick lip_stain')" style='color:#000000'>Lipstick - Lip Stain</a>
+                        <a class="dropdown-item" onclick="muncul('lipstick lipstick')" style='color:#000000'>Lipstick - Lip Stick</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image:url('assets/img/make-02.jpg');">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading" style='color:#000000'>a e l l a</h1>
+                        <p class="intro-text">A free, responsive, one page Makeup Product Finding.<br>Created with love.</p><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="text-center content-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-14 mx-auto">
+                    <h2>About Aella</h2>
+                    <p>Aella is a free website for makeup finding that you need. It can find right now, with the list by&nbsp;<a href="#">BRAND, TYPE & CATEGORY</a>.</p>
+                    <p>See another recommendation product for you:</p>
+                    
+                    <section>
+                        <div class="container text-center py-4">
+                            <div class="row" id="hasil"></div>
+                        </div>
+                    </section>
+                    
+                    <script>
+                        // Random Preview
+                        function preview() 
+                        {
+                            document.getElementById("hasil").innerHTML="";
+                            fetch("http://makeup-api.herokuapp.com/api/v1/products.json?")
+                              .then(Response => Response.json())
+                              .then(data => 
+                                {
+                                  console.log(data.docs);
+                                  for(var i=0; i<4; i++)
+                                    {
+                                        document.getElementById("hasil").innerHTML+=
+                                        "<div class='col-md-3 mb-3'>"+
+                                        "<div class='card'>"+
+                                        "<img src="+data[i].image_link+" onerror=\"this.onerror=null; this.src='assets/img/noimage.png';\"/><br>"+
+                                        "<h5 style='color:#000000'>"+data[i].brand+"</h5>"+
+                                        "<p style='color:#000000'>"+data[i].name+"</p>"+
+                                        "<p style='color:#000000'>"+data[i].price+"</p>"+
+                                        "<a href='"+data[i].product_link+"'class='btn btn-primary btn-lg active' role='button' aria-pressed='true'>Selengkapnya</a>"
+                                        "<hr style='border:1px outset;background-color:#000000;color:#353535;height:5px;width:75%;text-align:left;text-dark;margin-left:12.5%'/><br>"
+                                    }   
+                                })
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section class="text-center download-section content-section" id="download" style="background-image:url('assets/img/make-07.jpg');">
+        <div class="container">
+            <div class="col-lg-8 mx-auto">
+                <h1> </h1>
+                <p> </p>
+            </div>
+        </div>
+    </section>
+   
+    <section class="text-center content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-14 mx-auto">
+                    <h2>I am looking for</h2>
+                    
+                    <section>
+                        <div class="container text-center py-4">
+                            <div class="row" id="tampil"></div>
+                        </div>
+                    </section>
+                    
+                    <script>
+                        // Brand //
+                        function keluar(pilihan)
+                        {
+                            document.getElementById("tampil").innerHTML="";
+                            console.log(' '); 
+                            fetch("http://makeup-api.herokuapp.com/api/v1/products.json?brand="+pilihan)
+                            .then(Response => Response.json())
+                            .then(data => 
+                            {
+                                for(var i=0; i<40; i++)
+                                {
+                                document.getElementById("tampil").innerHTML+=
+                                    "<div class='col-md-3 mb-4'>"+
+                                    "<div class='card'>"+
+                                    "<img src="+data[i].image_link+" onerror=\"this.onerror=null; this.src='assets/img/noimage.png';\"/><br>"+
+                                    "<h5 style='color:#000000'>"+data[i].brand+"</h5>"+
+                                    "<p style='color:#000000'>"+data[i].name+"</p>"+
+                                    "<p style='color:#000000'>"+data[i].price+"</p>"+
+                                    "<a href='"+data[i].product_link+"'class='btn btn-primary btn-lg active' role='button' aria-pressed='true'>Selengkapnya</a>"
+                                    "<hr style='border:1px outset;background-color:#000000;color:#353535;height:5px;width:75%;text-align:left;margin-left:12.5%'/><br>"
+                                }      
+                            })
+                        }
+
+                        // Type //
+                        function output(pilihan)
+                        {
+                            document.getElementById("tampil").innerHTML="";
+                            console.log(' '); 
+                            fetch("http://makeup-api.herokuapp.com/api/v1/products.json?product_type="+pilihan)
+                            .then(Response => Response.json())
+                            .then(data => 
+                            {
+                                for(var i=0; i<40; i++)
+                                {
+                                document.getElementById("tampil").innerHTML+=
+                                    "<div class='col-md-3 mb-4'>"+
+                                    "<div class='card'>"+
+                                    "<img src="+data[i].image_link+" onerror=\"this.onerror=null; this.src='assets/img/noimage.png';\"/><br>"+
+                                    "<h5 style='color:#000000'>"+data[i].brand+"</h5>"+
+                                    "<p style='color:#000000'>"+data[i].name+"</p>"+
+                                    "<p style='color:#000000'>"+data[i].price+"</p>"+
+                                    "<a href='"+data[i].product_link+"'class='btn btn-primary btn-lg active' role='button' aria-pressed='true'>Selengkapnya</a>"
+                                    "<hr style='border:1px outset;background-color:#000000;color:#353535;height:5px;width:75%;text-align:left;margin-left:12.5%'/><br>"
+                                }    
+                            })
+                        }
+
+                        // Category //
+                        function muncul(pilihan)
+                        {
+                            document.getElementById("tampil").innerHTML="";
+                            var nyoba=pilihan.split(" ")
+                            console.log(' '); 
+                            fetch("http://makeup-api.herokuapp.com/api/v1/products.json?product_category="+nyoba[1]+"&product_type="+nyoba[0])
+                            .then(Response => Response.json())
+                            .then(data => 
+                            {
+                                for(var i=0; i<40; i++)
+                                {
+                                document.getElementById("tampil").innerHTML+=
+                                    "<div class='col-md-3 mb-4'>"+
+                                    "<div class='card'>"+
+                                    "<img src="+data[i].image_link+" onerror=\"this.onerror=null; this.src='assets/img/noimage.png';\"/><br>"+
+                                    "<h5 style='color:#000000'>"+data[i].brand+"</h5>"+
+                                    "<p style='color:#000000'>"+data[i].name+"</p>"+
+                                    "<p style='color:#000000'>"+data[i].price+"</p>"+
+                                    "<a href='"+data[i].product_link+"'class='btn btn-primary btn-lg active' role='button' aria-pressed='true'>Selengkapnya</a>"
+                                    "<hr style='border:1px outset;background-color:#000000;color:#353535;height:5px;width:75%;text-align:left;margin-left:12.5%'/><br>"
+                                }    
+                            })
+                        }
+                    </script>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <footer>
+        <div class="container text-center">
+            <p>Copyright ©&nbsp;AELLA 2021</p>
+        </div>
+    </footer>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+</body>
+
+</html>
